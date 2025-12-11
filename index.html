@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cuddle Kingdom — Soft Toys & Gifts</title>
+
+  <!-- Cute kid-friendly font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <h1 class="site-title">Cuddle Kingdom</h1>
+        <p class="site-tag">Where Happiness Comes in Soft Packages</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-btn active" data-target="home">Home</button>
+        <button class="nav-btn" data-target="products">Products</button>
+        <button class="nav-btn" data-target="contact">Contact</button>
+        <button class="nav-btn cart-toggle" id="openCart">
+          🧸 Cart <span id="navCartCount" class="cart-badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section home-section container">
+      <div class="home-grid">
+        <div class="hero-left">
+          <h2 class="hero-title">Welcome to Cuddle Kingdom</h2>
+          <p class="hero-slogan">Where Happiness Comes in Soft Packages!</p>
+          <p class="hero-desc">Hand-picked plush toys and cute gifts for little ones and the young at heart. Bright
+            colors, soft hugs, and safe materials.</p>
+          <div class="hero-cta">
+            <button class="btn-primary nav-scroll" data-target="products">Shop Now</button>
+            <button class="btn-secondary nav-scroll" data-target="contact">Contact Us</button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="slider" id="imageSlider" aria-roledescription="carousel">
+            <div class="slides" id="slidesContainer">
+              <!-- slides injected by JS -->
+            </div>
+            <button class="slider-btn prev" id="sliderPrev" aria-label="Previous">‹</button>
+            <button class="slider-btn next" id="sliderNext" aria-label="Next">›</button>
+            <div class="slider-dots" id="sliderDots" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section products-section container">
+      <div class="section-header">
+        <h3>Products</h3>
+        <p class="subtle">Cute & cuddly — pick your new friend!</p>
+      </div>
+
+      <div id="productsGrid" class="products-grid" aria-live="polite">
+        <!-- 20 product cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section container">
+      <div class="section-header">
+        <h3>Contact Us</h3>
+        <p class="subtle">We’d love to hear from you — questions, custom orders, and bulk requests.</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-info">
+          <p><span class="icon">📧</span> <strong>Email:</strong> hello@cuddlekingdom.example</p>
+          <p><span class="icon">📞</span> <strong>Phone:</strong> +91 98765 43210</p>
+          <p><span class="icon">📍</span> <strong>Address:</strong> 123 Soft Lane, Playtown</p>
+          <p><span class="icon">🛠</span> <strong>Developer:</strong> Mohammad Sohail Shaikh</p>
+        </div>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook" class="social">
+            <span class="icon">🔵</span> Facebook
+          </a>
+          <a href="#" aria-label="Instagram" class="social">
+            <span class="icon">📸</span> Instagram
+          </a>
+          <a href="#" aria-label="Twitter" class="social">
+            <span class="icon">🐦</span> X
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CART MODAL / SIDEPANEL -->
+  <div id="cartModal" class="cart-modal" aria-hidden="true">
+    <div class="cart-panel" role="dialog" aria-label="Shopping cart">
+      <header class="cart-header">
+        <h4>Your Cart</h4>
+        <button id="closeCart" class="close-cart" aria-label="Close cart">×</button>
+      </header>
+
+      <div id="cartItems" class="cart-items">
+        <!-- cart items injected by JS -->
+      </div>
+
+      <footer class="cart-footer">
+        <div class="cart-summary">
+          <div>Subtotal</div>
+          <div id="cartTotal" class="cart-total">₹0.00</div>
+        </div>
+        <div class="cart-actions">
+          <button id="clearCart" class="btn-secondary">Clear Cart</button>
+          <button id="checkoutBtn" class="btn-primary">Checkout</button>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cart-backdrop" id="cartBackdrop" tabindex="-1"></div>
+  </div>
+
+  <!-- Notification / Toast -->
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>
