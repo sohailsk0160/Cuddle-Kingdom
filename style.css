@@ -321,13 +321,13 @@ body.dark-mode .section-header .subtle {
 }
 
 .btn-secondary {
-  background: linear-gradient(180deg, #fff, #f8f8f8);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   /* slightly darker secondary */
   border: 2px solid rgba(106, 90, 122, 0.3);
   /* deeper border */
-  color: var(--text);
+  color: #3a2a4a;
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 12px;  
   font-weight: 700;
   cursor: pointer;
 }
