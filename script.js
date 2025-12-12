@@ -277,3 +277,32 @@ new Typed("#typeText", {
   backSpeed: 30,
   loop: true
 });
+
+//------------- Form submion -------------
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop page refresh
+
+    // Get form values
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+    const email = document.querySelector('input[placeholder="Your Email"]').value;
+    const subject = document.querySelector('input[placeholder="Subject"]').value;
+    const message = document.querySelector('textarea[placeholder="Your Message..."]').value;
+
+    // WhatsApp Number
+    const phoneNumber = "7021081648";
+
+    // Create WhatsApp message with formatting
+    const whatsappMessage =
+        `*New Contact Form Message*%0A` +
+        `%0A*Name:* ${name}` +
+        `%0A*Email:* ${email}` +
+        `%0A*Subject:* ${subject}` +
+        `%0A*Message:* ${message}` +
+        `%0A%0A---%0ASent from Cuddle Kingdom Website`;
+
+    // WhatsApp API Link
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
+});
