@@ -47,6 +47,145 @@ body {
   line-height: 1.4;
 }
 
+
+
+/* ----------------------------------
+   DARK MODE THEME VARIABLES
+---------------------------------- */
+body.dark-mode {
+  --bg: #1a1a1a;
+  --card: #2a2a2a;
+  --muted: #e0e0e0;
+  --accent: #ff69b4;
+  --accent-2: #ffd36e;
+  --accent-3: #4aa8ff;
+  --accent-4: #6effc3;
+  --text: #ffffff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(180deg, #1a1a1a, #000);
+  color: var(--text);
+}
+
+/* Header in Dark Mode */
+body.dark-mode .site-header {
+  background: linear-gradient(90deg, #222, #111);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .brand .site-title {
+  color: #fff;
+}
+body.dark-mode .site-tag {
+  color: #ccc;
+}
+
+/* Nav Buttons */
+body.dark-mode .nav-btn {
+  color: #eee;
+}
+body.dark-mode .nav-btn:hover {
+  color: #fff;
+}
+
+/* Cards + Product Boxes */
+body.dark-mode .product-card {
+  background: #2b2b2b;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contact section cards */
+body.dark-mode .contact-info,
+body.dark-mode .contact-form {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #333;
+  color: #fff;
+}
+
+/* Map border shadow */
+body.dark-mode .map-container {
+  box-shadow: 0 8px 18px rgba(255, 255, 255, 0.1);
+}
+
+/* Social buttons */
+body.dark-mode .social {
+  background: #333;
+}
+body.dark-mode .social:hover {
+  background: #444;
+}
+
+/* Toast */
+body.dark-mode .toast {
+  color: #fff;
+}
+
+/* ----------------------------------
+   DARK MODE for Contact Section
+---------------------------------- */
+body.dark-mode .contact-wrapper {
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  box-shadow: var(--shadow);
+}
+
+/* Left + Right Side */
+body.dark-mode .left-side,
+body.dark-mode .right-side {
+  color: #fff;
+}
+
+/* Contact Info + Form Cards */
+body.dark-mode .contact-info,
+body.dark-mode .contact-form {
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 5px 15px rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+/* Inputs */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #2b2b2b;
+  color: #f5f5f5;
+  box-shadow: 0 3px 8px rgba(255,255,255,0.08);
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+/* Social Buttons */
+body.dark-mode .social {
+  background: #333;
+  color: #fff;
+}
+
+body.dark-mode .social:hover {
+  background: #444;
+  box-shadow: 0 6px 18px rgba(255,255,255,0.15);
+}
+
+/* Map Container */
+body.dark-mode .map-container {
+  box-shadow: 0 8px 18px rgba(255,255,255,0.1);
+}
+
+/* Section Header */
+body.dark-mode .section-header h3 {
+  color: #fff;
+}
+body.dark-mode .section-header .subtle {
+  color: #bbb;
+}
+
+
+
+
 .container {
   width: 94%;
   max-width: var(--max-width);

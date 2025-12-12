@@ -306,3 +306,32 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     // Open WhatsApp
     window.open(whatsappURL, "_blank");
 });
+
+
+
+//-------------Dark Mode Toggle -------------
+
+const modeToggle = document.getElementById("modeToggle");
+
+modeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Change icon based on mode
+  if (document.body.classList.contains("dark-mode")) {
+    modeToggle.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    modeToggle.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load saved theme on refresh
+window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    modeToggle.textContent = "☀️";
+  }
+});
