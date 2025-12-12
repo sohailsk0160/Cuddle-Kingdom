@@ -487,80 +487,6 @@ body {
   border-top: 1px solid rgba(106, 90, 122, 0.1);
   padding-top: 12px
 }
-
-/* ---------- Section Header ---------- */
-.section-header h3 {
-  font-size: 2rem;
-  color: #4b2a65;
-  margin-bottom: 8px;
-}
-
-.section-header .subtle {
-  color: #6a3b9a;
-  font-size: 1rem;
-}
-
-/* ---------- Contact Card ---------- */
-.contact-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 30px 25px;
-  margin-top: 20px;
-  border-radius: 18px;
-  background: linear-gradient(145deg, #6a3b9a, #f4e8f4);
-  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
-}
-
-/* ---------- Contact Info ---------- */
-.contact-info p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.contact-info .icon {
-  font-size: 1.2rem;
-}
-
-/* ---------- Social Buttons ---------- */
-.socials {
-  display: flex;
-  gap: 14px;
-  margin-top: 15px;
-  flex-wrap: wrap;
-}
-
-.social {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  border-radius: 12px;
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-  background: linear-gradient(135deg, #6a3b9a, #9d50bb);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.social:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-
 /* ---------- Toast ---------- */
 .toast {
   position: fixed;
@@ -581,6 +507,139 @@ body {
   opacity: 1;
   transform: translateY(0)
 }
+/* ---------- Section Header ---------- */
+.section-header h3 {
+  font-size: 2rem;
+  color: #4b2a65;
+  margin-bottom: 8px;
+}
+
+.section-header .subtle {
+  color: #6a3b9a;
+  font-size: 1rem;
+}
+
+/* ---------- Main Wrapper ---------- */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 35px;
+  margin-top: 25px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #6a3b9a, #f4e8f4);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* FIXED → Left Side takes 35% (contact info + form stacked) */
+.left-side {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Contact Info Card */
+.contact-info {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Contact Form Card */
+.contact-form {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ---------- Right Side (Map) ---------- */
+.right-side {
+  width: 65%;
+}
+
+.map-container {
+  width: 100%;
+  height: 820px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Inputs ---------- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* ---------- Social Buttons ---------- */
+.socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.social {
+  background: #6a3b9a;
+  padding: 10px 18px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s ease-in-out;
+}
+
+.social:hover {
+  background: #4b227d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+}
+
 
 /* ---------- Responsive ---------- */
 @media (max-width:1024px) {
@@ -632,17 +691,5 @@ body {
 
   .site-title {
     font-size: 1.2rem
-  }
-}
-
-/* ---------- Responsive ---------- */
-@media screen and (max-width: 720px) {
-  .contact-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .socials {
-    margin-top: 20px;
   }
 }

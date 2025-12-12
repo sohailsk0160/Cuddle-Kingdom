@@ -12,6 +12,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
     <section id="home" class="section home-section container">
       <div class="home-grid">
         <div class="hero-left">
-          <h2 class="hero-title">Welcome to Cuddle Kingdom</h2>
+          <h2 class="hero-title"><span id="typeText"></span></h2>
           <p class="hero-slogan">Where Happiness Comes in Soft Packages!</p>
           <p class="hero-desc">Hand-picked plush toys and cute gifts for little ones and the young at heart. Bright
             colors, soft hugs, and safe materials.</p>
@@ -77,30 +78,57 @@
     <section id="contact" class="section contact-section container">
       <div class="section-header">
         <h3>Contact Us</h3>
-        <p class="subtle">We’d love to hear from you — questions, custom orders, and bulk requests.</p>
+        <p class="subtle">Reach out for queries, bulk orders, custom toys, or feedback.</p>
       </div>
 
-      <div class="contact-card">
-        <div class="contact-info">
-          <p><span class="icon">📧</span> <strong>Email:</strong> hello@cuddlekingdom.example</p>
-          <p><span class="icon">📞</span> <strong>Phone:</strong> +91 98765 43210</p>
-          <p><span class="icon">📍</span> <strong>Address:</strong> 123 Soft Lane, Playtown</p>
-          <p><span class="icon">🛠</span> <strong>Developer:</strong> Mohammad Sohail Shaikh</p>
+      <div class="contact-wrapper">
+
+        <!-- LEFT SIDE: CONTACT INFO + FORM -->
+        <div class="left-side">
+
+          <div class="contact-info">
+            <h4>Get in Touch</h4>
+
+            <p><span class="icon">📧</span> <strong>Email:</strong> hello@cuddlekingdom.example</p>
+            <p><span class="icon">📞</span> <strong>Phone:</strong> +91 98765 43210</p>
+            <p><span class="icon">📍</span> <strong>Address:</strong> 123 Soft Lane, Playtown</p>
+            <p><span class="icon">🛠</span> <strong>Developer:</strong> Mohammad Sohail Shaikh</p>
+
+            <div class="socials">
+              <a href="#" class="social"><span class="icon">🔵</span> Facebook</a>
+              <a href="#" class="social"><span class="icon">📸</span> Instagram</a>
+              <a href="#" class="social"><span class="icon">🐦</span> X</a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm">
+            <h4>Send Us a Message</h4>
+
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message..." rows="4" required></textarea>
+
+            <button type="submit" class="btn-primary form-btn">Send Message</button>
+          </form>
+
         </div>
 
-        <div class="socials">
-          <a href="#" aria-label="Facebook" class="social">
-            <span class="icon">🔵</span> Facebook
-          </a>
-          <a href="#" aria-label="Instagram" class="social">
-            <span class="icon">📸</span> Instagram
-          </a>
-          <a href="#" aria-label="Twitter" class="social">
-            <span class="icon">🐦</span> X
-          </a>
+        <!-- RIGHT SIDE: GOOGLE MAP -->
+        <div class="right-side">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.116100996!2d72.7410998!3d19.0821978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63df9c4568f%3A0xdeb95e399a097e1!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
         </div>
+
       </div>
     </section>
+
+
 
   </main>
 

@@ -269,3 +269,11 @@
     renderCart();
   });
 })();
+
+// ---------- Typed.js for hero title ----------
+new Typed("#typeText", {
+  strings: ["Welcome to Cuddle Kingdom", "Where Cuteness Lives ❤️"],
+  typeSpeed: 100,
+  backSpeed: 30,
+  loop: true
+});
